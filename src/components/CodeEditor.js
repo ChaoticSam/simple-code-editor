@@ -46,19 +46,13 @@ const CodeEditor = () => {
     syncScroll();
   };
 
- /* const handleTextareaInput = () => {
-    const textarea = textareaRef.current;
-    textarea.style.height = 'auto'; // Reset textarea height
-    textarea.style.height = `${textarea.scrollHeight}px`; // Set new height based on content
-  };
-  */
+
   return (
     <div className="code-editor-container">
         <textarea
           ref={textareaRef}
           value={code}
           onChange={handleCodeChange}
-          //onInput={handleTextareaInput}
           onScroll={handleTextareaScroll}
           spellCheck="false"
           className="code-input"
